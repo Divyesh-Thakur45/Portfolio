@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.bubble {
+  @apply m-0 mx-2.5 h-8 w-8 relative;
+  border-radius: 2px;
+  background-color: #4fc3dc;
+  box-shadow: 0 0 0 10px rgba(79, 195, 220, 0.27),
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+  animation: animated 15s linear infinite;
+  animation-duration: calc(150s / var(--i));
+}
+
+.bubble:nth-child(even) {
+  background-color: #ff2d75;
+  box-shadow: 0 0 0 10px rgba(255, 45, 117, 0.27),
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
+}
+
+@keyframes animated {
+  0% {
+    transform: translateY(100vh) scale(0.1) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-10vh) scale(1) rotate(360deg);
+  }
+}
