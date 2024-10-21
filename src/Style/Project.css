@@ -1,0 +1,60 @@
+/* Project Page */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.project-page {
+    background-color: #000000;
+    color: #fff;
+}
+
+.Box {
+    width: 400px;
+    height: 400px;
+    border-radius: 25px;
+    padding: 50px;
+    position: relative;
+    background: repeating-conic-gradient(from var(--aa), #ff2770 0%, #ff2770 5%, transparent 5% ,  transparent 40%, #ff2770 50%);
+    animation: animate 4s linear infinite;
+}
+@property --aa{
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes animate {
+    0% {
+        /* background: repeating-conic-gradient(from 0deg, #ff2770 0%, #ff2770 5%, transparent 40%, #ff2770 50%); */
+        --aa: 0deg;
+    }
+
+    100% {
+        /* background: repeating-conic-gradient(from 360deg, #ff2770 0%, #ff2770 5%, transparent 40%, #ff2770 50%); */
+        --aa: 360deg;
+    }
+}
+.Box::before {
+    content: '';
+    position: absolute;
+    border-radius: 25px;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--aa), #45f3ff 0%, #45f3ff 5%, transparent 5% , transparent 40%, #45f3ff 50%);
+    animation: animate 4s linear infinite;
+    animation-delay: -1s;
+    z-index: 1;
+}
+
+.Box::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background-color: #2d2d39;
+    z-index: 2;
+    border-radius: 25px;
+    border: 3px solid #2d2d39;
+}
+

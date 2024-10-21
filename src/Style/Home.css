@@ -113,26 +113,167 @@ body {
     background-color: #fff;
 }
 
-/* 
-.skill-main{
+
+/* .skill-main{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     margin: auto;
-}
+} */
+/* Odd Boxes */
 .skill-box {
-    width: 85%;
+    width: 300px;
+    height: 300px;
     border-radius: 25px;
     margin: auto;
-    height: 24vh;
-    border: 1px solid #fff;
+    margin-bottom: 20px;
+    /* border: 1px solid #fff; */
     transition: 0.5s;
+    position: relative;
 }
 
-.skill-box:hover{
+.skill-box span:nth-child(1) {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 3s;
+    animation: animate 3s linear infinite;
+}
+
+.skill-box:hover span:nth-child(1) {
+    background: #0d71fc;
+    border: none;
+    /* border: 2px solid #0d71fc; */
+}
+
+.skill-box span:nth-child(2) {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate 6s linear infinite;
+}
+
+.skill-box:hover span:nth-child(2) {
+    background: #0d71fc;
+    border: none;
+    /* border: 2px solid #0d71fc; */
+}
+
+.skill-box span:nth-child(3) {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate2 10s linear infinite;
+}
+
+.skill-box:hover span:nth-child(3) {
+    background: #0d71fc;
+    border: none;
+    /* ff2d75 */
+    /* border: 2px solid #0d71fc; */
+}
+
+/* Evene Box */
+.skill-box2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    margin: auto;
+    margin-bottom: 20px;
+    /* border: 1px solid #fff; */
+    transition: 0.5s;
+    position: relative;
+}
+
+.skill-box2 span:nth-child(1) {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate 3s linear infinite;
+}
+
+.skill-box2:hover span:nth-child(1) {
+    background: #ff2d75;
+    border: none;
+    /* border: 2px solid #0d71fc; */
+}
+
+.skill-box2 span:nth-child(2) {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate 6s linear infinite;
+}
+
+.skill-box2:hover span:nth-child(2) {
+    background: #ff2d75;
+    border: none;
+    /* border: 2px solid #0d71fc; */
+}
+
+.skill-box2 span:nth-child(3) {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate2 10s linear infinite;
+}
+
+.skill-box2:hover span:nth-child(3) {
+    background: #ff2d75;
+    border: none;
+    /* ff2d75 */
+    /* border: 2px solid #0d71fc; */
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* .skill-box:hover{
     background: linear-gradient(145deg, #000000, #000000);
     box-shadow: rgba(239, 233, 233, 0.3) 0px 5px 15px 3px;
         
-}
+} */
 
 .sub-skill-box {
     display: flex;
@@ -140,14 +281,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    position: relative;
 }
 
-.Icone {
+/* .Icone {
     font-size: 72px;
     margin-bottom: 10px;
     color: #E65100;
-}
-
+} */
+/* 
 .Icone-text {
     text-align: center;
     color: antiquewhite;
@@ -157,84 +299,5 @@ body {
 
 
 
-/* Project Page */
-.project-page {
-    background-color: #000000;
-    color: #fff;
-}
 
 
-.timeline {
-    margin: auto;
-    max-width: 34.18em;
-}
-
-.checkpoint {
-    /* border: 1px solid #fff; */
-    max-width: 34em;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    position: relative;
-}
-
-.checkpoint div{
-    border: 1px solid #fff;
-    border-radius: 25px;
-    padding: 50px;
-}
-
-.checkpoint:nth-child(odd) {
-    border-left: 3px solid #fff;
-    padding-left: 80px;
-    transform: translateX(250px);
-    /* Removed fixed translate to keep it responsive */
-}
-
-.checkpoint:nth-child(even) {
-    border-right: 3px solid #fff;
-    padding-right: 80px;
-    transform: translateX(-291.5px);
-    /* Ensures symmetry for even checkpoints */
-}
-
-.checkpoint:nth-child(odd)::before,
-.checkpoint:nth-child(even)::before {
-    content: '';
-    background: #fff;
-    width: 72px;
-    height: 3px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.checkpoint:nth-child(odd)::before {
-    left: 0;
-}
-
-.checkpoint:nth-child(even)::before {
-    right: 0;
-}
-
-.checkpoint:nth-child(odd) .sub-checkpoint::before,
-.checkpoint:nth-child(even) .sub-checkpoint::before{
-    content: '';
-    background-color: #fff;
-    box-shadow: 0 0 0.5 #0d71fc;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-}
-.checkpoint:nth-child(odd) .sub-checkpoint::before {
-    left: 75px;
-}
-.checkpoint:nth-child(even) .sub-checkpoint::before {
-    right: 75px;
-}
-.lenskartMockUp{
-    background-color: transparent;
-    filter: drop-shadow(20px 20px 30px rgba(235, 126, 126, 0.5));
-}

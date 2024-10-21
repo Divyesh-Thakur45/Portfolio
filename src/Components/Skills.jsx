@@ -18,7 +18,10 @@ const Skills = () => {
 
       <div className="skill-main grid grid-cols-3 gap-4 m-auto px-20">
         {/* Html  */}
-        <div className="skill-box w-9/12 rounded-xl m-auto h-[20vh] border border-white transition duration-500 hover:bg-black hover:shadow-lg hover:shadow-white/80">
+        <div className="skill-box">
+          <span></span>
+          <span></span>
+          <span></span>
           <div className="sub-skill-box flex flex-col justify-center items-center h-full">
             <FaHtml5 className="text-[55px] mb-2 text-[#E65100]" />
             <h1 className="Icone-text text-center text-antiquewhite text-2xl">
@@ -28,7 +31,10 @@ const Skills = () => {
         </div>
 
         {/* css  */}
-        <div className="skill-box w-9/12 rounded-xl m-auto h-[20vh] border border-white transition duration-500 hover:bg-black hover:shadow-lg hover:shadow-white/80">
+        <div className="skill-box2">
+          <span></span>
+          <span></span>
+          <span></span>
           <div className="sub-skill-box flex flex-col justify-center items-center h-full">
             <IoLogoCss3 className="text-[55px] mb-2 text-[#0277BD]" />
             <h1 className="Icone-text text-center text-antiquewhite text-2xl">
@@ -38,7 +44,10 @@ const Skills = () => {
         </div>
 
         {/* Javascript  */}
-        <div className="skill-box w-9/12 rounded-xl m-auto h-[20vh] border border-white transition duration-500 hover:bg-black hover:shadow-lg hover:shadow-white/80">
+        <div className="skill-box">
+          <span></span>
+          <span></span>
+          <span></span>
           <div className="sub-skill-box flex flex-col justify-center items-center h-full">
             <SiJavascript className="text-[55px] mb-2 text-[#FFD600]" />
             <h1 className="Icone-text text-center text-antiquewhite text-2xl">
@@ -48,7 +57,10 @@ const Skills = () => {
         </div>
 
         {/* BOOTSTRAP  */}
-        <div className="skill-box w-9/12 rounded-xl m-auto h-[20vh] border border-white transition duration-500 hover:bg-black hover:shadow-lg hover:shadow-white/80">
+        <div className="skill-box2">
+          <span></span>
+          <span></span>
+          <span></span>
           <div className="sub-skill-box flex flex-col justify-center items-center h-full">
             <FaBootstrap className="text-[55px] mb-2 text-[#3BB1DC]" />
             <h1 className="Icone-text text-center text-antiquewhite text-2xl">
@@ -58,7 +70,10 @@ const Skills = () => {
         </div>
 
         {/* REACT  */}
-        <div className="skill-box w-9/12 rounded-xl m-auto h-[20vh] border border-white transition duration-500 hover:bg-black hover:shadow-lg hover:shadow-white/80">
+        <div className="skill-box">
+          <span></span>
+          <span></span>
+          <span></span>
           <div className="sub-skill-box flex flex-col justify-center items-center h-full">
             <IoLogoReact className="text-[55px] mb-2 text-[#5DDAF6]" />
             <h1 className="Icone-text text-center text-antiquewhite text-2xl">
@@ -68,7 +83,10 @@ const Skills = () => {
         </div>
 
         {/* REDUX  */}
-        <div className="skill-box w-9/12 rounded-xl m-auto h-[20vh] border border-white transition duration-500 hover:bg-black hover:shadow-lg hover:shadow-white/80">
+        <div className="skill-box2">
+          <span></span>
+          <span></span>
+          <span></span>
           <div className="sub-skill-box flex flex-col justify-center items-center h-full">
             <TbBrandRedux className="text-[55px] mb-2 text-[#7749BD]" />
             <h1 className="Icone-text text-center text-antiquewhite text-2xl">
