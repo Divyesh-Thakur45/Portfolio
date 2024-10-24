@@ -204,8 +204,8 @@ const Home = () => {
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1000}
-                // onLoopDone={handleDone}
-                // onType={handleType}
+              // onLoopDone={handleDone}
+              // onType={handleType}
               />
             </span>
           </h1>

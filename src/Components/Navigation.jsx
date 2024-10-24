@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logoName from "./Logo/LOGO_DT_2.png";
 import "../Style/Navigation.css";
 import { FaHome } from "react-icons/fa";
@@ -9,8 +9,10 @@ import { IoIosContact } from "react-icons/io";
 import { MdDarkMode } from "react-icons/md";
 import { IoMdSunny } from "react-icons/io";
 import { IoSettingsSharp } from "react-icons/io5";
+import { themeContext } from "./Context/Allcontext";
 
 const Navigation = () => {
+
   const [open, setopen] = useState(false);
   const colors = [
     "#1F2937",
@@ -20,7 +22,8 @@ const Navigation = () => {
     "#008080",
     "#7FFF00",
   ];
-  const [Mode, setMode] = useState(false);
+  // const [Mode, setMode] = useState(false);
+  const { ModeChange, Theme } = useContext(themeContext);
   return (
     <div>
       <nav className="navbar fixed w-full">
@@ -61,16 +64,17 @@ const Navigation = () => {
         </div>
         <div className="Changer">
           <div className="modeIcone">
-            <button onClick={() => setMode(!Mode)}>
-              {Mode ? (
-                <IoMdSunny className="dark" />
+            <button onClick={ModeChange}>{Theme ? "Dark" : "White"}</button>
+            {/* <button onClick={() => ModeChange}>
+              {Theme ? (
+                <IoMdSunny className="" />
               ) : (
-                <MdDarkMode className="dark" />
+                <MdDarkMode className="" />
               )}
-            </button>
+            </button> */}
           </div>
           <div className="colorIcone">
-            <IoSettingsSharp className="animate-spin-slow settingIcone" />
+            <IoSettingsSharp className="animate-spin-slow" />
             <div>
               <div className=" w-52 grid grid-cols-3">
                 {colors.map((color) => {
