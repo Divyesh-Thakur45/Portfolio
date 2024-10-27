@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaHtml5 } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io";
 import { SiJavascript } from "react-icons/si";
@@ -6,14 +6,16 @@ import { FaBootstrap } from "react-icons/fa";
 import { IoLogoReact } from "react-icons/io5";
 import { TbBrandRedux } from "react-icons/tb";
 import "../Style/Home.css";
+import { themeContext } from "./Context/Allcontext";
 
 const Skills = () => {
+  const { Theme } = useContext(themeContext);
   return (
-    <div className="Skill-page bg-black text-white">
+    <div className={`Skill-page ${Theme ?  'bg-[#000] text-[#fff]' : 'bg-[#ECF0F3] text-[#000]'}`}>
       <div className="Skill-page-header">
         <h1>My Skills</h1>
-        <span className="line-1"></span>
-        <span className="line-2"></span>
+        <span className={`line-1 ${Theme ?  'bg-[#000]' : 'bg-[#fff]' }`}></span>
+        <span className={`line-2 ${Theme ?  'bg-[#000]' : 'bg-[#fff]' }`}></span>
       </div>
 
       <div className="skill-main grid grid-cols-3 gap-4 m-auto px-20">

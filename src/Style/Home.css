@@ -30,7 +30,7 @@ body {
 .Welcome {
     font-size: 14px;
     font-family: Montserratt;
-    color: #fff;
+    /* color: #fff; */
     letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 500;
@@ -39,7 +39,7 @@ body {
 }
 
 .title {
-    color: #ffffff;
+    /* color: #ffffff; */
     font-weight: 700;
     font-size: 60px;
     line-height: 62px;
@@ -47,11 +47,11 @@ body {
 }
 
 .description {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 30px;
-    color: var(--color-lightn);
+    /* color: var(--color-lightn); */
     padding-right: 16%;
-    opacity: 0.9;
+    /* opacity: 0.9; */
 }
 
 .box-shadow {
@@ -59,9 +59,11 @@ body {
     height: 50px;
     width: 50px;
     border-radius: 5px;
-    background: linear-gradient(145deg, #000000, #000000);
+    /* background: linear-gradient(145deg, #000000, #000000);
     box-shadow: 7px 7px 10px rgba(015, 015, 015, 0.4),
-        -7px -7px 10px rgba(070, 070, 070, 0.4);
+        -7px -7px 10px rgba(070, 070, 070, 0.4); */
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    /* color: black; */
 }
 
 .toolIcone {
@@ -102,7 +104,7 @@ body {
     bottom: 2%;
     height: 5px;
     width: 70%;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 .line-2 {
@@ -110,7 +112,7 @@ body {
     bottom: -14%;
     height: 5px;
     width: 40%;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 
@@ -295,9 +297,3 @@ body {
     color: antiquewhite;
     font-size: 28px;
 } */
-
-
-
-
-
-

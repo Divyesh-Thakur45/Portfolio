@@ -10,11 +10,18 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #000000;
+    /* background-color: #000000; Dark */
+    background-color: #ECF0F3;
     padding: 10px 20px;
     border-bottom: 1px solid #c4cfde;
     transition: 0.3s ease-in-out;
     z-index: 999;
+}
+
+.logo {
+    font-size: 40px;
+    color: #000;
+    cursor: pointer;
 }
 
 .nav-links {
@@ -38,61 +45,24 @@ body {
 
 .sub-nav-links span {
     font-size: 18px;
-    color: white;
+    /* color: white; dark  */
+    color: #000;
     transition: opacity 0.3s ease-in-out;
 
 }
 
 .sub-nav-links:hover span {
-    color: #00f7f7;
-}
-
-.small-dots-one,
-.small-dots-two {
-    border-radius: 50%;
-    background-color: #fff;
-    position: absolute;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.small-dots-one {
-    height: 7px;
-    width: 7px;
-    right: 28%;
-    top: 20%;
-    opacity: 0;
-    background-color: #00f7f7;
-}
-
-.small-dots-two {
-    height: 12px;
-    width: 12px;
-    right: 19%;
-    top: -1%;
-    opacity: 0;
-    background-color: #00f7f7;
-}
-
-.nav-icone {
-    font-size: 22px;
-    height: 30px;
-    width: 30px;
-    padding: 7px;
-    border-radius: 50%;
-    background-color: #00f7f7;
-    opacity: 0;
-    transform: scale(0);
-    position: absolute;
-    right: 0%;
-    top: 0%;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* color: #00f7f7; dark  */
+    color: #FF014F;
+    cursor: pointer;
 }
 
 .Line {
     height: 3px;
     width: 0%;
     margin: auto;
-    background-color: #00f7f7;
+    /* background-color: #00f7f7; dark  */
+    background-color: #FF014F;
     transition: width 0.3s ease-in-out;
 }
 
@@ -100,43 +70,23 @@ body {
     width: 110%;
 }
 
-.sub-nav-links:hover .small-dots-one {
-    opacity: 1;
-}
-
-.sub-nav-links:hover .small-dots-two {
-    opacity: 1;
-}
-
-.sub-nav-links:hover .nav-icone {
-    opacity: 1;
-    transform: scale(1) translateY(-18px);
-    cursor: pointer;
-}
-
-.dark,
-.settingIcone {
-    font-size: 22px;
-    height: 30px;
-    width: 30px;
-    padding: 7px;
-    border-radius: 50px;
-    background-color: white;
-    cursor: pointer;
-}
-
-.settingIcone {
-    margin: 0 0 0 20px;
-}
-
 .Changer {
     display: flex;
-    text-align: end;
-    /* background-color: #fff; */
+    justify-content: space-between;
+    text-align: center;
+    width: 120px;
+    align-items: center;
 }
 
 .modeIcone,
 .colorIcone {
-    width: 50%;
-    /* background-color: red / yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    width: 50px;
+    height: 50px;
+    /* background-color: red; */
 }

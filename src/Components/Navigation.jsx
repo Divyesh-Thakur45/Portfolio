@@ -28,54 +28,38 @@ const Navigation = () => {
     <div>
       <nav className="navbar fixed w-full">
         <div className="logo">
-          <img src={logoName} className="h-12" alt="" />
+          <h1>DT</h1>
         </div>
         <div className="nav-links font-Montserratt">
           <div className="sub-nav-links">
-            <span className="small-dots-one"></span>
-            <span className="small-dots-two"></span>
-            <FaHome className="nav-icone" />
+
             <span>Home <div className="Line"></div></span>
           </div>
           <div className="sub-nav-links">
-            <span className="small-dots-one"></span>
-            <span className="small-dots-two"></span>
-            <IoMdPerson className="nav-icone" />
+
             <span>About  <div className="Line"></div></span>
           </div>
           <div className="sub-nav-links">
-            <span className="small-dots-one"></span>
-            <span className="small-dots-two"></span>
-            <SiSkillshare className="nav-icone" />
+
             <span>Skills <div className="Line"></div></span>
           </div>
           <div className="sub-nav-links">
-            <span className="small-dots-one"></span>
-            <span className="small-dots-two"></span>
-            <IoBag className="nav-icone" />
+
             <span>Projects <div className="Line"></div></span>
           </div>
           <div className="sub-nav-links">
-            <span className="small-dots-one"></span>
-            <span className="small-dots-two"></span>
-            <IoIosContact className="nav-icone" />
+
             <span>Contact <div className="Line"></div></span>
           </div>
         </div>
         <div className="Changer">
           <div className="modeIcone">
-            <button onClick={ModeChange}>{Theme ? "Dark" : "White"}</button>
-            {/* <button onClick={() => ModeChange}>
-              {Theme ? (
-                <IoMdSunny className="" />
-              ) : (
-                <MdDarkMode className="" />
-              )}
-            </button> */}
+            <button onClick={ModeChange}>{Theme ? <MdDarkMode className="" /> : <IoMdSunny className="" />}</button>
+
           </div>
           <div className="colorIcone">
             <IoSettingsSharp className="animate-spin-slow" />
-            <div>
+            {/* <div>
               <div className=" w-52 grid grid-cols-3">
                 {colors.map((color) => {
                   return (
@@ -87,7 +71,7 @@ const Navigation = () => {
                   );
                 })}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>
