@@ -1,11 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import "../Style/contact.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import worldTexture from "../Images/glob.jpg";
+import { themeContext } from "./Context/Allcontext";
 
 const Contact = () => {
   const Box = useRef(null);
+
+  const { Theme } = useContext(themeContext);
   useEffect(() => {
     const scene = new THREE.Scene();
 
@@ -80,7 +83,7 @@ const Contact = () => {
     animate();
   }, []);
   return (
-    <div>
+    <div className={`${Theme ? 'bg-[#000000]' : 'bg-[#ECF0F3]'}`}>
       <div className="contact-page-header">
         <h1>My Skills</h1>
         <span className="line-1"></span>
