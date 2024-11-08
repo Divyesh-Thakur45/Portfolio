@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef } from "react";
 import "../Style/contact.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import worldTexture from "../Images/glob.jpg";
+import worldTexture from "../Images/glob.jpeg";
 import { themeContext } from "./Context/Allcontext";
 
 const Contact = () => {

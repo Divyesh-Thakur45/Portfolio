@@ -1,9 +1,7 @@
-/* Navbar.css */
-
 body {
     margin: 0;
     padding: 0;
-    /* font-family: Arial, sans-serif; */
+    font-family: Arial, sans-serif;
 }
 
 .navbar {
@@ -92,4 +90,141 @@ body {
     padding: 15px;
     margin: 0px 0px 0px 15px;
     /* background-color: red; */
+}
+
+.navIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    margin: 0px 0px 0px 15px;
+    display: none;
+}
+
+/* Media Queries */
+
+/* 300px to 576px */
+@media (min-width: 300px) and (max-width: 576px) {
+
+    .navbar {
+        /* flex-direction: column; */
+        justify-content: space-between;
+        padding: 10px;
+        position: relative;
+    }
+
+    .navIcon {
+        display: block;
+    }
+
+    .logo {
+        font-size: 24px;
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        background-color: #d2caca;
+    }
+
+    .nav-links {
+        position: absolute;
+        left: 0%;
+        top: 150%;
+        flex-direction: column;
+        background-color: #d2caca;
+        width: 100%;
+    }
+
+    .sub-nav-links {
+        align-items: start;
+        text-align: start;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .Changer {
+        /* background-color: red; */
+        justify-content: center;
+    }
+}
+
+/* 576px to 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        width: 70%;
+    }
+
+    .sub-nav-links span {
+        font-size: 16px;
+    }
+}
+
+/* 768px to 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .nav-links {
+        width: 60%;
+    }
+
+    .sub-nav-links span {
+        font-size: 18px;
+    }
+}
+
+/* 992px to 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .navbar {
+        padding: 10px 25px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    .nav-links {
+        width: 55%;
+    }
+
+    .sub-nav-links span {
+        font-size: 18px;
+    }
+}
+
+/* 1200px to 1400px */
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .navbar {
+        padding: 10px 30px;
+    }
+
+    .logo {
+        font-size: 38px;
+    }
+
+    .nav-links {
+        width: 50%;
+    }
+
+    .sub-nav-links span {
+        font-size: 18px;
+    }
 }

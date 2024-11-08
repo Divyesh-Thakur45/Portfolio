@@ -54,18 +54,18 @@ const Home = () => {
         </div>
       </div>
       <div className="main my-detail">
-        <div className="">
+        <div className="main-left">
           <h4 className={`Welcome ${Theme ? 'text-[#fff]' : 'text-[#000000]'}`}>Welcome to my porfolio</h4>
           <h1 className={`font-Montserratt font-semibold title`}>
             {/*  */}
-            <span className={`${Theme ? 'text-[#fff]' : 'text-[#000000]'} `}>Hello , I'm{" "}</span>
-            <span style={{ color: Theme ? "#00f7f7" : "#FF014F", fontWeight: "bold" }}>
+            <span className={`${Theme ? 'text-[#fff]' : 'text-[#000000]'} typeWriter`}>Hello , I'm{" "}</span>
+            <span style={{ color: Theme ? "#00f7f7" : "#FF014F", fontWeight: "bold" }} className="typeWriter">
               Divyesh Thakur
             </span>
           </h1>
           <h1 className="title">
-            <span className={`${Theme ? 'text-[#fff]' : 'text-[#000000]'} `}>a</span>
-            <span style={{ color: Theme ? "#00f7f7" : "#FF014F", fontWeight: "bold" }}>
+            <span className={`${Theme ? 'text-[#fff]' : 'text-[#000000]'} typeWriter `}>a</span>
+            <span className="typeWriter" style={{ color: Theme ? "#00f7f7" : "#FF014F", fontWeight: "bold" }}>
               {/* Style will be inherited from the parent element */}
               <Typewriter
                 words={[
@@ -107,10 +107,8 @@ const Home = () => {
           </div>
         </div>
         <div className="Laptop-Model">
-          {/* <h1>Laptop</h1> */}
-          {/* <canvas ref={LaptopRef} className="MacBook"></canvas> */}
           <div className="intro-mac-container">
-            <Canvas style={{ width: "500px", height: "500px" }}>
+            <Canvas style={{ width: "500px", height: "500px" }} className="MacBook" >
               <ambientLight />
               <OrbitControls enableZoom={false} />
               <pointLight position={[1, 10, 10]} />

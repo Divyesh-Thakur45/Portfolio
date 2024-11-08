@@ -4,6 +4,8 @@ import { MdDarkMode } from "react-icons/md";
 import { IoMdSunny } from "react-icons/io";
 import { IoSettingsSharp } from "react-icons/io5";
 import { themeContext } from "./Context/Allcontext";
+import { AiOutlineMenu } from "react-icons/ai";
+import { IoClose } from "react-icons/io5";
 
 const Navigation = () => {
 
@@ -21,10 +23,10 @@ const Navigation = () => {
   return (
     <div>
       <nav className="navbar fixed w-full">
-        <div className="logo">
+        <div className={`logo ${open ? "block" : "hidden"} md:block`}>
           <h1>DT</h1>
         </div>
-        <div className="nav-links font-Montserratt">
+        <div className={`nav-links ${open ? "block" : "hidden"} md:block`} style={{display:"none"}}>
           <div className="sub-nav-links">
 
             <span>Home <div className="Line"></div></span>
@@ -45,6 +47,10 @@ const Navigation = () => {
 
             <span>Contact <div className="Line"></div></span>
           </div>
+        </div>
+
+        <div className="hamburger" onClick={() => setopen(!open)}>
+          {open ? <IoClose className="navIcon" /> : <AiOutlineMenu className="navIcon" />}
         </div>
         <div className="Changer">
           <div className="">
