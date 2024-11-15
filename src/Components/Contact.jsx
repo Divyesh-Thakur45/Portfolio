@@ -23,10 +23,10 @@ const Contact = () => {
     );
     scene.add(mesh);
 
-    // Set up sizes
+    // Initialize sizes object
     const sizes = {
-      width: 650,
-      height: 650,
+      width: window.innerWidth * 0.8, // Initial responsive width
+      height: window.innerHeight * 0.8, // Initial responsive height
     };
 
     // Create camera
@@ -50,16 +50,39 @@ const Contact = () => {
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    // Handle window resizing
-    window.addEventListener("resize", () => {
-      sizes.width = 1000;
-      sizes.height = 1000;
+    // Function to handle resizing based on screen size
+    const handleResize = () => {
+      if (window.innerWidth <= 576) {
+        sizes.width = 300;
+        sizes.height = 300;
+      } else if (window.innerWidth > 576 && window.innerWidth <= 768) {
+        sizes.width = 500;
+        sizes.height = 500;
+      } else if (window.innerWidth > 768 && window.innerWidth <= 992) {
+        sizes.width = 650;
+        sizes.height = 650;
+      } else if (window.innerWidth > 992 && window.innerWidth <= 1200) {
+        sizes.width = 800;
+        sizes.height = 800;
+      } else if (window.innerWidth > 1200 && window.innerWidth <= 1400) {
+        sizes.width = 1000;
+        sizes.height = 1000;
+      } else {
+        sizes.width = 1200;
+        sizes.height = 1200;
+      }
 
       camera.aspect = sizes.width / sizes.height;
       camera.updateProjectionMatrix();
 
       renderer.setSize(sizes.width, sizes.height);
-    });
+    };
+
+    // Set initial sizes
+    handleResize();
+
+    // Listen for window resizing
+    window.addEventListener("resize", handleResize);
 
     // Animation function
     const clock = new THREE.Clock();
@@ -81,7 +104,13 @@ const Contact = () => {
 
     // Start the animation loop
     animate();
-  }, []);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      renderer.dispose();
+    };
+  }, [worldTexture]);
   return (
     <div className={`${Theme ? 'bg-[#000000]' : 'bg-[#ECF0F3]'}`}>
       <div className="contact-page-header">

@@ -198,6 +198,9 @@ body {
 
 
 /* Skill Page */
+.Skill-page{
+    overflow: hidden;
+}
 .Skill-page-header {
     font-size: 52px;
     position: relative;
